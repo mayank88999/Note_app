@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/login_fragment">
+
+    <fragment
+        android:id="@+id/login_fragment"
+        android:name="com.example.note_app.views.Login_fragment"
+        android:label="fragment_login_fragment"
+        tools:layout="@layout/fragment_login_fragment" >
+        <action
+            android:id="@+id/action_login_fragment_to_notes_fragment"
+            app:destination="@id/notes_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/notes_fragment"
+        android:name="com.example.note_app.views.Notes_fragment"
+        android:label="fragment_notes_fragment"
+        tools:layout="@layout/fragment_notes_fragment" >
+        <action
+            android:id="@+id/action_notes_fragment_to_note_fragment"
+            app:destination="@id/note_fragment" />
+        <action
+            android:id="@+id/action_notes_fragment_to_edit_fragment"
+            app:destination="@id/edit_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/note_fragment"
+        android:name="com.example.note_app.views.Note_fragment"
+        android:label="fragment_note_fragment"
+        tools:layout="@layout/fragment_note_fragment" >
+        <action
+            android:id="@+id/action_note_fragment_to_notes_fragment"
+            app:destination="@id/notes_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/edit_fragment"
+        android:name="com.example.note_app.views.Edit_fragment"
+        android:label="fragment_edit_fragment"
+        tools:layout="@layout/fragment_edit_fragment" >
+        <action
+            android:id="@+id/action_edit_fragment_to_notes_fragment"
+            app:destination="@id/notes_fragment" />
+    </fragment>
+</navigation>
